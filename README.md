@@ -1,6 +1,5 @@
 # spotiLy
-A script to fetch lyrics for currently playing songs on Spotify and display them.
-
+SpotiLy fetches the lyrics for the currently playing song on Spotify application and displays them.
 
 ## Instructions
 Just run the python file while Spotify is running and playing to fetch and display lyrics for the song.
