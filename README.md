@@ -5,8 +5,8 @@ SpotiLy fetches the lyrics for the currently playing song on Spotify application
 Just run the python file while Spotify is playing a song to fetch and display lyrics.
 
 ## Credits
-### azapi - elmoiv
+### azapi - https://github.com/elmoiv/azapi
 API for fetching lyrics from AZlyrics.com
 
-### SwSpotify - Aadi Bajpai
+### SwSpotify - https://github.com/marioortizmanero/SwSpotify
 Library to get the song and artist of the currently playing song from the Spotify application
