@@ -7,7 +7,7 @@ def displayLyrics(lyrics):
  master = Tk()
  master.geometry('500x600')
  master.title("SpotiLy")
- master.iconbitmap('logo.ico')
+# master.iconbitmap('logo.ico')
  scroll = Scrollbar(master)
  scroll.pack(side=RIGHT, fill=Y)
  eula = Text(master, wrap=NONE, yscrollcommand=scroll.set, font='Arial 12', height=100, bg='yellow')
