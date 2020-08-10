@@ -1,0 +1,18 @@
+{
+    "name": "spotily",
+    "version": "2.0.0",
+    "description": "a lyric fetcher for currently playing on Spotify.",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "author": "Waleed Ahmad",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^9.2.0",
+        "electron-packager": "^15.0.0"
+    },
+    "dependencies": {
+        "node-lyrics": "^2.1.1"
+    }
+}
