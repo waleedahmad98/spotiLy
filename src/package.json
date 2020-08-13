@@ -4,13 +4,26 @@
     "description": "a lyric fetcher for currently playing on Spotify.",
     "main": "main.js",
     "scripts": {
-        "start": "electron ."
+        "start": "electron .",
+        "clean": "del-cli build",
+        "copy": "copyfiles assets/**/* *.js *.html *.css package.json build",
+        "py-build": "pyinstaller Spotily.py --distpath build -F",
+        "make": "npm run configure && cd build && electron-builder",
+        "configure": "npm-run-all clean copy py-build && cd build && npm install"
+    },
+    "build": {
+        "icon": "assets/icons/",
+        "files": ["!SpotiLy, !*.spec"],
+        "win": {
+          "target": "nsis",
+          "icon": "assets/icons/icon.ico"
+        }
     },
     "author": "Waleed Ahmad",
     "license": "ISC",
     "devDependencies": {
         "electron": "^9.2.0",
-        "electron-packager": "^15.0.0"
+        "electron-builder": "^22.8.0"
     },
     "dependencies": {
         "node-lyrics": "^2.1.1"

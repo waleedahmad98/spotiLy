@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require('electron')
-const path = require('path');
+const path = require('path')
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -12,9 +12,9 @@ function createWindow() {
         },
         title: 'SpotiLy'
     })
-    win.setIcon('../img/logo.ico');
-    win.removeMenu();
-    win.loadFile('main.html')
+    win.setIcon(path.join(app.getAppPath(), 'assets/icons/icon.png'))
+    win.removeMenu()
+    win.loadFile(path.join(app.getAppPath(), 'main.html'))
 }
 
 app.whenReady().then(createWindow)

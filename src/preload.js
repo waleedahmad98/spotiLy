@@ -1,9 +1,8 @@
-// const { AssertionError } = require('assert')
-// const { parseLyrics } = require('node-lyrics');
-const { spawn } = require("child_process");
+const { execFile } = require("child_process");
+const { app } = require('electron').remote;
+const path = require('path');
 
 var pythonProcess = null;
-
 
 function refresh() {
     if (pythonProcess) {
@@ -12,7 +11,7 @@ function refresh() {
 }
 
 function runPy(success, error) {
-    pythonProcess = spawn('python', ["./SpotiLy.py"]);
+    pythonProcess = execFile(path.join(app.getAppPath(), 'Spotily.exe'));
     pythonProcess.stdout.on('data', async(data) => {
         let response = JSON.parse(data);
         if (response.ok) {
